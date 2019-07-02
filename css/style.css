@@ -1,0 +1,138 @@
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #c69963;
+  font-family: "Nunito", sans-serif; }
+
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1; }
+  .heading-2--light {
+    color: #f9f7f6; }
+  .heading-2--dark {
+    color: #54483A; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font-size: 1.6rem;
+  font-weight: 300; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--dark {
+    color: #54483A;
+    font-weight: 600;
+    font-size: 1.6rem; }
+  .heading-4--danger {
+    color: orangered;
+    font-weight: 300;
+    font-size: 1.6rem; }
+
+.btn {
+  background-color: #c69963;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 1.8rem 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn:hover {
+    background-color: #B28451; }
+  .btn:focus {
+    outline: none; }
+
+.mb-xs {
+  margin-bottom: 1rem; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
+
+.my-xs {
+  margin: 1rem 0; }
+
+.my-sm {
+  margin: 2rem 0; }
+
+.my-md {
+  margin: 3rem 0; }
+
+.my-lg {
+  margin: 4rem 0; }
+
+.my-hg {
+  margin: 8rem 0; }
+
+.ma-xs {
+  margin: 1rem; }
+
+.ma-sm {
+  margin: 2rem; }
+
+.ma-md {
+  margin: 3rem; }
+
+.ma-lg {
+  margin: 4rem; }
+
+.ma-hg {
+  margin: 8rem; }
+
+.mx-xs {
+  margin: 0 1rem; }
+
+.label-danger {
+  color: #fff;
+  fill: #fff;
+  background-color: orangered;
+  border-radius: 0; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: center; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid; }
