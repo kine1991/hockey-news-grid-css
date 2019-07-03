@@ -1,0 +1,30 @@
+.header{
+    // background-image: linear-gradient(rgba(color-primary, 0.5), rgba($color-secondary, 0.8)), url(../image/hockey1.jpg);
+    background-image: linear-gradient(rgba($color-secondary, .8), rgba($color-primary, .7)), url(../image/hockey4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    // grid-column: 1/span 1;
+    // grid-row: 1/2;
+    grid-column: start-content/ end-content;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-content: center;
+    align-items: center;
+    &__text {
+        grid-column: 2/ span 3;
+        color: #fff;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        height: 70vh;
+
+        &__text {
+            grid-column: 2/ span 5;
+            color: #fff;
+        }
+    }
+}
+

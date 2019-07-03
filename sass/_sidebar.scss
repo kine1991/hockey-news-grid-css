@@ -1,0 +1,8 @@
+.sidebar{
+    background: black;
+    position: sticky;
+    top: 0;
+    grid-column: start-sidebar/ end-sidebar;
+    grid-row: 1/-1;
+}
+

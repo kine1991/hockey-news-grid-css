@@ -30,9 +30,14 @@ body{
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6;
+    background-color: $color-grey-light-1;
 }
 
 .container {
     display: grid;
-    
+    grid-template-columns: [start-sidebar] 6rem [end-sidebar start-content] 1fr [end-content];
+    grid-template-rows: min-content min-content min-content;
+    // grid-template-rows: 80vh min-content 40vw repeat(3, min-content) ;
+    // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)  [full-end];
 }
+
