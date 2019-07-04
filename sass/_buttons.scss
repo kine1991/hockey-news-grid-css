@@ -25,15 +25,6 @@
                 opacity: 0;
             }
         }
-
-        
-        // &:hover {
-        //   background:darken($bg,8%);
-        //   transition: all 0.3s ease;
-        // }
-        // &:active {
-        //   background:darken($bg,25%);
-        // } 
     }
 
     &--white {
@@ -52,17 +43,7 @@
         @include button-bg($color-danger);
         color: $color-white;
 
-        // &:hover{
-        //     background-color: $color-danger;
-    
-        // }
     }
-
-
-    // &:hover{
-    //     background-color: $color-primary-dark;
-
-    // }
 
     &:focus{
         outline: none;        
@@ -82,7 +63,7 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
-    // font-size: $default-font-size;
+    
     margin: 0.75rem 1rem ;
 
 
@@ -95,7 +76,6 @@
         &:hover {
             transform: translateY(-3px);
             box-shadow: 0 1rem 2rem rgba($color-black,.2);
-            // background: rgba($color-primary-dark, .9);
             background:darken($bg,8%);
             transition: all .4s;
     
@@ -104,15 +84,6 @@
                 opacity: 0;
             }
         }
-
-        
-        // &:hover {
-        //   background:darken($bg,8%);
-        //   transition: all 0.3s ease;
-        // }
-        // &:active {
-        //   background:darken($bg,25%);
-        // } 
     }
 
     &--white {
@@ -141,6 +112,5 @@
         outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-        // background: $color-grey-light-2;
     } 
 }
