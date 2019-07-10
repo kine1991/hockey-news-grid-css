@@ -1,6 +1,4 @@
 .news{
-    // grid-column: 2/ span 1;
-    // grid-row: 2/ span 1;
     text-align: center;
     &__container{
         padding: 0 3rem;
@@ -74,7 +72,7 @@
 
 
 .main-post{
-    background-color: $color-grey-800;
+    // background-color: $color-grey-800;
     &__container{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
