@@ -6,12 +6,20 @@
 .heading-1 {
   font-size: 4rem;
   text-transform: uppercase;
-  color: #5C6BC0;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+  display: inline-block;
+  background-image: linear-gradient(to right, #9FA8DA, #3949AB);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all 1s; }
   .heading-1--light {
     color: #f9f7f6; }
   .heading-1--dark {
     color: #54483A; }
+  .heading-1--animation:hover {
+    transform: skewY(3deg) skewX(1deg) scale(1.05);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-2 {
   font-size: 4rem;
@@ -241,6 +249,113 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+.card {
+  display: grid;
+  grid-template-rows: max-content max-content min-content;
+  align-content: space-between;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
+  .card__img-container {
+    position: relative; }
+  .card__img-container:hover:before {
+    content: '';
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; }
+  .card__img-container:before {
+    content: '';
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    transition: all .4s; }
+  .card__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block; }
+  .card__text {
+    max-height: 7rem;
+    overflow: scroll;
+    /* Добавляем полосы прокрутки */ }
+
+.card-custom {
+  perspective: 200rem;
+  -moz-perspective: 200rem;
+  height: 40rem;
+  position: relative; }
+  .card-custom__side {
+    height: 40rem;
+    transition: all 3s;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
+    .card-custom__side--front {
+      background: #F5F5F5; }
+    .card-custom__side--back {
+      transform: rotateY(180deg); }
+      .card-custom__side--back-1 {
+        background-image: linear-gradient(to bottom right, #5C6BC0, orangered); }
+      .card-custom__side--back-2 {
+        background-image: linear-gradient(to bottom right, #000, #fff); }
+      .card-custom__side--back-3 {
+        background-image: linear-gradient(to bottom right, #000, #5C6BC0); }
+  .card-custom:hover .card-custom__side--front {
+    transform: rotateY(180deg); }
+  .card-custom:hover .card-custom__side--back {
+    transform: rotateY(0); }
+  .card-custom__picture {
+    height: 20rem;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: 1.5rem; }
+    .card-custom__picture--1 {
+      background-image: linear-gradient(to right, rgba(255, 69, 0, 0.8), rgba(92, 107, 192, 0.8)), url(../image/nhl16.jpg); }
+    .card-custom__picture--2 {
+      background-image: linear-gradient(to right, #fff, #000), url(../image/nhl17.jpg); }
+    .card-custom__picture--3 {
+      background-image: linear-gradient(to right, #000, #5C6BC0), url(../image/nhl19.jpeg); }
+  .card-custom__details {
+    font-size: 2rem;
+    padding: 0 3rem; }
+    .card-custom__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card-custom__details ul li {
+        text-align: center;
+        padding: 1rem 1.5rem; }
+        .card-custom__details ul li:not(:last-child) {
+          border-bottom: 1px solid #BDBDBD; }
+  .card-custom__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+  .card-custom__box-name {
+    font-size: 2rem; }
+  .card-custom__box-price {
+    font-size: 7rem;
+    font-weight: 100; }
+  .card-custom__heading {
+    position: absolute;
+    top: 40%;
+    right: 10%; }
+
 .navigation {
   position: fixed;
   top: 0;
@@ -317,8 +432,13 @@ body {
         .navigation__menu > div > div > ul > li > a:hover {
           color: #9FA8DA; }
 
+.section-header {
+  margin-bottom: 10rem; }
+
 .section-offer {
-  background-color: #BDBDBD; }
+  background-color: #EEEEEE;
+  text-align: center;
+  height: 60rem; }
 
 .section-main-post {
   background-color: #424242; }
@@ -336,42 +456,6 @@ body {
     @media only screen and (max-width: 37.5em) {
       .news__container {
         grid-template-columns: repeat(1, 1fr); } }
-
-.card {
-  display: grid;
-  grid-template-rows: max-content max-content min-content;
-  align-content: space-between;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
-  .card__img-container {
-    position: relative; }
-  .card__img-container:hover:before {
-    content: '';
-    background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5; }
-  .card__img-container:before {
-    content: '';
-    background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    transition: all .4s; }
-  .card__img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block; }
-  .card__text {
-    max-height: 7rem;
-    overflow: scroll;
-    /* Добавляем полосы прокрутки */ }
 
 .main-post__container {
   display: grid;
@@ -413,6 +497,12 @@ body {
   align-self: center;
   justify-self: start; }
 
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  margin: 0 5rem; }
+
 .sidebar {
   background: black;
   position: sticky;
@@ -421,7 +511,7 @@ body {
   z-index: 99; }
 
 .header {
-  height: 60vh;
+  height: 70vh;
   background-image: linear-gradient(rgba(16, 29, 44, 0.8), rgba(92, 107, 192, 0.7)), url(../image/hockey4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -441,7 +531,7 @@ body {
     color: #fff; }
   @media only screen and (max-width: 50em) {
     .header {
-      height: 70vh; }
+      height: 80vh; }
       .header__text {
         grid-column: 2/ span 5;
         color: #fff; } }

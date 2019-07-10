@@ -17,12 +17,33 @@ $font-display: 'Josefin Sans', sans-serif;
     @extend %heading;
     font-size: 4rem;
     text-transform: uppercase; 
-    // color: $color-primary;
-    color: $color-primary;
     font-family: $font-primary;
+    // color: $color-primary;
+    display: inline-block;
+    background-image: linear-gradient(to right , $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all 1s;
 
     &--light { color: $color-grey-light-1; }
     &--dark { color: $color-grey-dark-1; }
+    &--animation{
+        &:hover{
+            transform: skewY(3deg) skewX(1deg) scale(1.05);
+            text-shadow: .5rem 1rem 2rem rgba($color-black, .2);  
+            // background: red;
+        }
+    }
+
+    // &:hover &--animation{
+    //     // &--animation{
+    //         transform: skewX(27deg) translateX(10rem);
+    //     // }
+    //     // 
+    //     // transform: skewY(1deg) skewX(1deg) scale(1.01);
+    //     // text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    // }
 } 
 
 

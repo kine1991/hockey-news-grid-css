@@ -1,5 +1,5 @@
 .header{
-    height: 60vh;
+    height: 70vh;
     background-image: linear-gradient(rgba($color-secondary, .8), rgba($color-primary, .7)), url(../image/hockey4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@
     }
 
     @media only screen and (max-width: $bp-medium){
-        height: 70vh;
+        height: 80vh;
 
         &__text {
             grid-column: 2/ span 5;
