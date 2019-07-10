@@ -129,8 +129,12 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [start-sidebar] 6rem [end-sidebar start-content] 1fr [end-content];
+  grid-template-columns: [start-sidebar-column] 6rem [end-sidebar-column start-content] 1fr [end-content];
   grid-template-rows: min-content min-content min-content; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-columns: [start-content] 1fr [end-content];
+      grid-template-rows: [start-sidebar-row] 6rem [start-end-row] min-content min-content min-content; } }
 
 .btn {
   background-color: #5C6BC0;
@@ -241,7 +245,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 100; }
   .navigation__toggler {
     width: 6rem;
     height: 6rem;
@@ -311,11 +315,9 @@ body {
         color: inherit;
         transition: color 0.4s ease; }
         .navigation__menu > div > div > ul > li > a:hover {
-          color: #5C6BC0; }
+          color: #9FA8DA; }
 
 .news {
-  grid-column: 2/ span 1;
-  grid-row: 2/ span 1;
   text-align: center; }
   .news__container {
     padding: 0 3rem;
@@ -406,20 +408,25 @@ body {
   background: black;
   position: sticky;
   top: 0;
-  grid-column: start-sidebar/ end-sidebar;
-  grid-row: 1/-1; }
+  grid-row: 1/-1;
+  z-index: 99; }
 
 .header {
+  height: 60vh;
   background-image: linear-gradient(rgba(16, 29, 44, 0.8), rgba(92, 107, 192, 0.7)), url(../image/hockey4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 50vh;
-  grid-column: start-content/ end-content;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   align-content: center;
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
   .header__text {
     grid-column: 2/ span 3;
     color: #fff; }

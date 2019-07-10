@@ -1,6 +1,6 @@
 .news{
-    grid-column: 2/ span 1;
-    grid-row: 2/ span 1;
+    // grid-column: 2/ span 1;
+    // grid-row: 2/ span 1;
     text-align: center;
     &__container{
         padding: 0 3rem;
@@ -15,6 +15,10 @@
         @media only screen and (max-width: $bp-small){
             grid-template-columns: repeat(1, 1fr);
         }
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        // grid-column: start-content/ end-content;
     }
 
 
@@ -120,6 +124,10 @@
     .btn{
         align-self: center;
         justify-self: start;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        // grid-column: start-content/ end-content;
     }
 
 }
