@@ -353,8 +353,25 @@ body {
     font-weight: 100; }
   .card-custom__heading {
     position: absolute;
-    top: 40%;
-    right: 10%; }
+    top: 12rem;
+    right: 2rem;
+    width: 60%;
+    color: #fff;
+    text-align: right; }
+    .card-custom__heading-span {
+      padding: 1rem 1.5rem;
+      font-size: 2rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      border-radius: .5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+      .card-custom__heading-span--1 {
+        background-image: linear-gradient(to right, rgba(255, 69, 0, 0.7), rgba(92, 107, 192, 0.7)); }
+      .card-custom__heading-span--2 {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.7)); }
+      .card-custom__heading-span--3 {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(92, 107, 192, 0.7)); }
 
 .navigation {
   position: fixed;
