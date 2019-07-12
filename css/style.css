@@ -133,7 +133,7 @@ body {
   color: #6D5D4B;
   font-weight: 300;
   line-height: 1.6;
-  background-color: #f9f7f6; }
+  background-color: #EEEEEE; }
 
 .container {
   display: grid;
@@ -453,9 +453,13 @@ body {
   margin-bottom: 10rem; }
 
 .section-offer {
-  background-color: #EEEEEE;
   text-align: center;
   height: 60rem; }
+
+.section-reviews {
+  margin: 0 auto;
+  text-align: center;
+  position: relative; }
 
 .section-main-post {
   background-color: #424242; }
@@ -519,6 +523,68 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
   margin: 0 5rem; }
+
+.review {
+  width: 75%;
+  margin: 5rem auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  padding: 6rem;
+  min-height: 28rem;
+  transform: skewX(12deg); }
+  .review__shape {
+    height: 15rem;
+    width: 15rem;
+    transform: translateX(-1rem) skewX(-12deg);
+    float: left;
+    clear: both;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative; }
+  .review:hover .review__name {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .review:hover .review__image {
+    filter: brightness(50%);
+    transform: scale(1.1); }
+  .review__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: all 1s; }
+  .review__name {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all 1s;
+    backface-visibility: hidden; }
+  .review__text {
+    font-size: 2rem;
+    transform: skewX(-12deg);
+    color: #000; }
+
+.reviews-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; }
+  .reviews-bg__container {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url(../image/hockey-bg9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%; }
 
 .sidebar {
   background: black;
