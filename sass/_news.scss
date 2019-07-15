@@ -188,3 +188,27 @@
 
     }
 }
+
+
+
+
+.claim{
+    background-image: linear-gradient(115deg, 
+                                        rgba($color-white, 0.5) 0%, 
+                                        rgba($color-white, 0.5) 45%, 
+                                        rgba($color-white, 0.9) 45%), 
+                                        url(../image/hockey-bg6.jpg);
+    height: 60rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__form {
+
+    }
+}
+
+.claim-form{
+    grid-column: 2/ span 1;
+    padding: 5rem;
+}

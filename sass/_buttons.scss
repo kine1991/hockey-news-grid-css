@@ -98,6 +98,10 @@
         @include button-bg($color-primary-dark);
         color: $color-white;
     }
+    &--green{
+        @include button-bg($color-green-600);
+        color: $color-white;
+    }
     &--danger{
         @include button-bg($color-danger);
         color: $color-white;
