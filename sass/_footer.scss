@@ -1,0 +1,59 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, min-content);
+
+    &__logo{
+        grid-column: 4/ span 2;
+        grid-row: 1/2;
+    }
+
+    &__box{
+        
+    }
+
+    &__main{
+        &--1{
+            grid-column: 2/ span 2;
+            grid-row: 2/3; 
+            background: indianred; 
+        }
+        &--2{
+            grid-column: 2/ span 2;
+            grid-row: 2/3; 
+            background: yellow; 
+        }
+        &--3{
+            grid-column: 4/ span 1;
+            grid-row: 2/3;  
+            background: teal;
+        }
+        &--4{
+            grid-column: 5/ span 1;
+            grid-row: 2/3;  
+            background: tan;
+        }
+        &--5{
+            grid-column: 6/ span 1;
+            grid-row: 2/3;  
+            background: aquamarine;
+        }
+        &--6{
+            grid-column: 3/ span 3;
+            grid-row: 3/4;  
+            background: wheat;
+        }
+    }
+
+    &__main2{
+
+    }
+}
+
+
+.logo__icon{
+    width: 15rem;
+    height: 15rem;
+    fill: aqua;
+
+}
